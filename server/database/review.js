@@ -1,44 +1,19 @@
+/* jshint esversion: 8 */
+const express = require('express');
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const reviews = new Schema({
-	id: {
-    type: Number,
-    required: true,
-	},
-	name: {
-    type: String,
-    required: true
-  },
-  dealership: {
-    type: Number,
-    required: true,
-  },
-  review: {
-    type: String,
-    required: true
-  },
-  purchase: {
-    type: Boolean,
-    required: true
-  },
-  purchase_date: {
-    type: String,
-    required: true
-  },
-  car_make: {
-    type: String,
-    required: true
-  },
-  car_model: {
-    type: String,
-    required: true
-  },
-  car_year: {
-    type: Number,
-    required: true
-  },
+const review = new Reviews({
+  "id": new_id,
+  "name": data.name,
+  "dealership": data.dealership,
+  "review": data.review,
+  "purchase": data.purchase,
+  "purchase_date": data.purchase_date,
+  "car_make": data.car_make,
+  "car_model": data.car_model,
+  "car_year": data.car_year,
 });
 
 module.exports = mongoose.model('reviews', reviews);
