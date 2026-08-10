@@ -5,7 +5,8 @@ const fs = require('fs');
 const  cors = require('cors');
 const app = express();
 const port = 3030;
-
+const fs = require('fs');
+const dealers_data = JSON.parse(fs.readFileSync('data/dealers.json', 'utf8'));
 
 
 app.use(cors());
